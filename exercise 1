@@ -1,0 +1,57 @@
+const calcTip = function (bill) {
+return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+
+/* Write your code below. Good luck! 🙂 */
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+const tips = [];
+const totals = [];
+
+for(let i = 0;i < 10;i++){
+    const tip = calcTip(bills[i]);    
+    tips.push(tip);
+}
+
+for(let i = 0;i < 10;i++){
+    const total = tips[i] + bills[i]; 
+    totals.push(total);
+}
+
+console.log(tips);
+console.log(totals);
+
+
+// Tehtud 2 min 30 sec... sellest vahem kuna ma ei votnud aega aga ma tean, et see on max aeg mis kiirusega ma selle ara tegin
+//BONUS
+
+
+function calcAverage(arr){
+    let sum = 0;
+    
+for (let i = arr.length - 1; i >= 0; i++){
+        sum = sum + arr[i];
+    }
+    
+    const average = sum / arr.length;
+    return average;
+    
+}
+
+console.log(calcAverage(bills));
+
+
+/*
+
+
+kui array "bills" on "string", siis mitte midagi ei toota
+
+
+*/
+
+
+
+
+
+
